@@ -6,19 +6,21 @@
         <h1>My Todo List</h1>
         <!-- Jinja 2 to merge Python into this document -->
         <!-- Note the use of single curly brackets in this case -->
+        <!--  
+            {% %} to insert/inject logic code 
+            {{ }} to insert/inject data
+        -->
+
         {% for task in tasks %}
         <div>
             <p>
                 {{ task.title }} : <b>{{ task.description }}</b>
+                {% if task.done %}
+                    <span>&#9989;</span>
+                {% endif %}
             </p>
         </div>
         {% endfor %}
     </body>
 
 </html>
-
-<!--
-
-
-    
--->
