@@ -3,4 +3,4 @@ from app import app
 
 @app.route('/') # listen to the home/root
 def index():
-    return 
+    return render_template('index.html')
